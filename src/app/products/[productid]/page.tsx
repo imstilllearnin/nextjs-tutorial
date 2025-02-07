@@ -1,11 +1,15 @@
-export default function ProductDetails({
-    params,
+export default async function Page({
+  params,
 }: {
-    params: {productid: string};
+  params: Promise<{
+    productid: string;
+  }>;
 }) {
-    return(
-        <>
-            <h1>Details About Product {params.productid}</h1>;
-        </>
-    )
+  const { productid } = await params;
+
+  return (
+    <>
+      <h1>Details About Product {productid}</h1>;
+    </>
+  );
 }

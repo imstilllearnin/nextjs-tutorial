@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+const colors = require("tailwindcss/colors");
 
 export default {
   content: [
@@ -11,6 +12,9 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        primary: "#202225",
+        secondary: "#5865f2",
+        gray: colors.neutral,
       },
     },
   },

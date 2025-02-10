@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import "./global.css";
 
 export const metadata: Metadata = {
   title: {
@@ -15,24 +16,18 @@ export default function RootLayout({
 }) {
   return (
     <html>
-      <body style={{ backgroundColor: "darkgray" }}>
-        <header
-          style={{
-            backgroundColor: "darkred",
-            padding: "1rem",
-          }}
-        >
-          <p>header</p>
-        </header>
-        {children}
-        <footer
-          style={{
-            backgroundColor: "darkblue",
-            padding: "1rem",
-          }}
-        >
-          <p>footer</p>
-        </footer>
+      <body className="bg-pink-300 min-h-screen flex flex-col">
+        <div className="flex-grow p-4">
+          <header className="bg-red-800 p-4">
+            <p>header</p>
+          </header>
+          {children}
+        </div>
+        <div className="p-4">
+          <footer className="p-4 bg-blue-800">
+            <p>footer</p>
+          </footer>
+        </div>
       </body>
     </html>
   );

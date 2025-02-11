@@ -22,9 +22,8 @@ export default function AuthLayout({
       {nav_links.map((link) => {
         const isActive = path_name.startsWith(link.href);
         return (
-          <div className="flex p-1">
+          <div className="flex p-1" key={link.name}>
             <Button
-              key={link.name}
               className={
                 isActive
                   ? "bg-gradient-to-r from-red-500 to-blue-500 text-white px-6 py-3 rounded-lg transition-all duration-500 hover:from-blue-500 hover:to-red-500"

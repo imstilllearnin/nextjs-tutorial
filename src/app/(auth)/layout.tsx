@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
-import path from "path";
+import { useState } from "react";
 
 const nav_links = [
   { name: "Login", href: "/login" },
@@ -17,10 +17,21 @@ export default function AuthLayout({
   children: React.ReactNode;
 }) {
   const path_name = usePathname();
+  const [input, setinput] = useState("");
   return (
     <div className="flexbox flex-row">
+      <div>
+        <input
+          type="text"
+          name=""
+          value={input}
+          onChange={(e) => setinput(e.target.value)}
+          id=""
+        />
+      </div>
       {nav_links.map((link) => {
         const isActive = path_name.startsWith(link.href);
+
         return (
           <div className="flex p-1" key={link.name}>
             <Button

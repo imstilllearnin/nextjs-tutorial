@@ -1,4 +1,4 @@
-import { Calendar, Home, Inbox, Search, Settings } from "lucide-react";
+import { Home, Search, Settings } from "lucide-react";
 import Link from "next/link";
 
 import {
@@ -13,7 +13,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
   SidebarMenuSub,
-  SidebarMenuSubItem,
+  //  SidebarMenuSubItem,
 } from "@/components/ui/sidebar";
 
 import {

@@ -1,5 +1,4 @@
 import { Metadata } from "next";
-import { Button } from "@/components/ui/button";
 
 type Props = {
   params: Promise<{

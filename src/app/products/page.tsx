@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 export default function ProductList() {
   return (
     <>
-      <h1 className="m-1">Product list</h1>
+      <h1 className="text-3x1 font-bold underline mb-1">Product List</h1>
       <h2>
         <Button className="m-1">
           <Link href="/products/1">Product 1</Link>

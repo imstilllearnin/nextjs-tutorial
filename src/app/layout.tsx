@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import "./global.css";
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/app-sidebar";
+import { ErrorWrapper } from "./error-wrapper";
 
 export const metadata: Metadata = {
   title: {
@@ -26,7 +27,7 @@ export default function RootLayout({
               <SidebarTrigger />
             </header>
             <main className="flex-grow p-4 m-4 rounded-md bg-white">
-              {children}
+              <ErrorWrapper>{children}</ErrorWrapper>
             </main>
             <footer className="p-4 m-4 mt-0 rounded-md bg-blue-800">
               <p>footer</p>

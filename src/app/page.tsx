@@ -3,18 +3,18 @@ import { Button } from "@/components/ui/button";
 
 export default function Home() {
   return (
-    <div className="rounded-md">
-      <h1 className="text-3x1 font-bold underline mb-1">Welcome Home Bitch!</h1>
+    <div>
+      <h1 className="text-3xl font-bold underline mb-2">Welcome Home Bitch!</h1>
       <ul>
         <li>
-          <Button className="m-1">
-            <Link href="/blog">Blog</Link>
-          </Button>
+          <Link href="/blog">
+            <Button className="m-1">Blog</Button>
+          </Link>
         </li>
         <li>
-          <Button className="m-1">
-            <Link href="/products">products</Link>
-          </Button>
+          <Link href="/products">
+            <Button className="m-1">products</Button>
+          </Link>
         </li>
       </ul>
     </div>

@@ -23,13 +23,13 @@ export default function RootLayout({
         <SidebarProvider>
           <AppSidebar />
           <div className="flex flex-col flex-grow">
-            <header className="bg-red-800 rounded-md p-4 m-4 mb-0">
+            <header className="bg-blue-400 rounded-md p-4 m-4 mb-0">
               <SidebarTrigger />
             </header>
             <main className="flex-grow p-4 m-4 rounded-md bg-white">
               <ErrorWrapper>{children}</ErrorWrapper>
             </main>
-            <footer className="p-4 m-4 mt-0 rounded-md bg-blue-800">
+            <footer className="bg-red-400 p-4 m-4 mt-0 rounded-md ">
               <p>footer</p>
             </footer>
           </div>

@@ -1,4 +1,4 @@
-import { Home, Search, Settings, Cart } from "lucide-react";
+import { Home, ShoppingCart, Rss, LayoutDashboard } from "lucide-react";
 import Link from "next/link";
 
 import {
@@ -29,19 +29,19 @@ const items = [
     icon: Home,
   },
   {
-    title: "Support",
-    url: "/support",
-    icon: Search,
-  },
-  {
-    title: "Settings",
-    url: "/settings",
-    icon: Settings,
-  },
-  {
     title: "Products",
     url: "/products",
-    icon: cart,
+    icon: ShoppingCart,
+  },
+  {
+    title: "Blog",
+    url: "/blog",
+    icon: Rss,
+  },
+  {
+    title: "Dashboard",
+    url: "/complex-dashboard",
+    icon: LayoutDashboard,
   },
 ];
 
@@ -51,7 +51,7 @@ export function AppSidebar() {
       <SidebarHeader />
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel>Sidebar</SidebarGroupLabel>
+          <SidebarGroupLabel>Menu</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               {items.map((item) => (
@@ -64,20 +64,20 @@ export function AppSidebar() {
                   </SidebarMenuButton>
                 </SidebarMenuItem>
               ))}
-              <Collapsible defaultOpen className="group/collapsible">
-                {/*collapsing item */}
-                <SidebarMenuItem>
+              {/* <Collapsible defaultOpen className="group/collapsible"> */}
+              {/*collapsing item       */}
+              {/* <SidebarMenuItem>
                   <CollapsibleTrigger asChild>
                     <SidebarMenuButton />
                   </CollapsibleTrigger>
                   <CollapsibleContent>
-                    <SidebarMenuSub>
-                      {/*sidebarmenuitems go in here*/}
-                    </SidebarMenuSub>
+                    <SidebarMenuSub> */}
+              {/*sidebarmenuitems go in here*/}
+              {/* </SidebarMenuSub>
                   </CollapsibleContent>
                 </SidebarMenuItem>
-              </Collapsible>
-              {/*collapsing item */}
+              </Collapsible> */}
+              {/*collapsing item      */}
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>

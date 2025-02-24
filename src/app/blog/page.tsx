@@ -5,5 +5,5 @@ export const metadata: Metadata = {
 };
 
 export default function Blog() {
-  return <h1>My Blog</h1>;
+  return <h1 className="text-3xl font-bold underline mb-2">My Blog</h1>;
 }

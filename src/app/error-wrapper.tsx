@@ -15,7 +15,11 @@ const ErrorSimulator = ({
     throw new Error(message);
   }
   return (
-    <Button title="Simulate an error" onClick={() => seterror(true)}>
+    <Button
+      className="h-6"
+      title="Simulate an error"
+      onClick={() => seterror(true)}
+    >
       Simulate Error
     </Button>
   );

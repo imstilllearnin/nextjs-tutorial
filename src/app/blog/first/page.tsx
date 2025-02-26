@@ -1,3 +1,5 @@
+import { Title } from "@/components/title";
+
 export default function firstBlog() {
-    return <h1>My Blog 1</h1>
+  return <Title>My Blog 1</Title>;
 }

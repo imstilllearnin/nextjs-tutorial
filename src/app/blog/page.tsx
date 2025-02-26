@@ -1,3 +1,4 @@
+import { Title } from "@/components/title";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -5,5 +6,5 @@ export const metadata: Metadata = {
 };
 
 export default function Blog() {
-  return <h1 className="text-3xl font-bold underline mb-2">My Blog</h1>;
+  return <Title>My Blog</Title>;
 }

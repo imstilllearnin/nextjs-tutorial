@@ -1,4 +1,11 @@
-import { Home, ShoppingCart, Rss, LayoutDashboard } from "lucide-react";
+import {
+  Home,
+  ShoppingCart,
+  Rss,
+  LayoutDashboard,
+  Pyramid,
+  Box,
+} from "lucide-react";
 import Link from "next/link";
 
 import {
@@ -13,7 +20,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
   SidebarMenuSub,
-  //  SidebarMenuSubItem,
+  SidebarMenuSubItem,
 } from "@/components/ui/sidebar";
 
 import {
@@ -45,6 +52,29 @@ const items = [
   },
 ];
 
+const interceptedItems = [
+  {
+    title: "F1",
+    url: "/f1",
+    icon: Box,
+  },
+  {
+    title: "F2",
+    url: "/f1/f2",
+    icon: Box,
+  },
+  {
+    title: "F3",
+    url: "/f3",
+    icon: Box,
+  },
+  {
+    title: "Inner F2",
+    url: "/f1/f2/inner-f2",
+    icon: Box,
+  },
+];
+
 export function AppSidebar() {
   return (
     <Sidebar variant="floating" collapsible="icon" className="p-4 pr-0">
@@ -64,20 +94,31 @@ export function AppSidebar() {
                   </SidebarMenuButton>
                 </SidebarMenuItem>
               ))}
-              {/* <Collapsible defaultOpen className="group/collapsible"> */}
-              {/*collapsing item       */}
-              {/* <SidebarMenuItem>
+
+              <Collapsible defaultOpen className="group/collapsible">
+                <SidebarMenuItem>
                   <CollapsibleTrigger asChild>
-                    <SidebarMenuButton />
+                    <SidebarMenuButton>
+                      <Pyramid />
+                      <span>Intercepted Routes</span>
+                    </SidebarMenuButton>
                   </CollapsibleTrigger>
                   <CollapsibleContent>
-                    <SidebarMenuSub> */}
-              {/*sidebarmenuitems go in here*/}
-              {/* </SidebarMenuSub>
+                    <SidebarMenuSub>
+                      {interceptedItems.map((item) => (
+                        <SidebarMenuSubItem key={item.title}>
+                          <SidebarMenuButton asChild>
+                            <Link href={item.url}>
+                              <item.icon />
+                              <span>{item.title}</span>
+                            </Link>
+                          </SidebarMenuButton>
+                        </SidebarMenuSubItem>
+                      ))}
+                    </SidebarMenuSub>
                   </CollapsibleContent>
                 </SidebarMenuItem>
-              </Collapsible> */}
-              {/*collapsing item      */}
+              </Collapsible>
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>

@@ -1,10 +1,11 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { Title } from "@/components/title";
 
 export default function Home() {
   return (
     <div>
-      <h1 className="text-3xl font-bold underline mb-2">Welcome Home Bitch!</h1>
+      <Title>Welcome Home Bitch!!</Title>
       <ul>
         <li>
           <Link href="/blog">
